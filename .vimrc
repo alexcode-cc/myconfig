@@ -63,14 +63,18 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 "
 " enable true color
-set termguicolors
+"set termguicolors
+"t_Co means terminal color
+set t_Co=256 
 "set background=dark
 set background=light
-colorscheme solarized8_flat
-"else
-"   set background=dark
-" set background=light
+"colorscheme solarized-old
 "colorscheme solarized
+colorscheme solarized8_flat
+"colorscheme wwdc16
+"else
+"set background=dark
+" set background=light
 "endif
 "
 
@@ -90,10 +94,12 @@ set noexpandtab
 "set autoindent    " align the new line indent with the previous line
 
 " define OpenURL (Linux)
-:command -bar -nargs=1 OpenURL :!firefox <targs>
+":command -bar -nargs=1 OpenURL :!firefox <targs>
 ":command -bar -nargs=1 OpenURL :!w3m <targs>
 " define OpenURL (Windows)
 ":command -bar -nargs=1 OpenURL :!start cmd /cstart /b <args>
+" define OpenURL (OSX)
+:command -bar -nargs=1 OpenURL :!open <args>
 
 " pen a vertical help with the :H command
 :command -nargs=* -complete=help H vertical belowright help <args>
