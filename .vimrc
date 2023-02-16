@@ -115,6 +115,10 @@ cnoreabbrev iy set ic
 cnoreabbrev in set noic
 cnoreabbrev dk set background=dark
 cnoreabbrev lt set background=light
+cnoreabbrev rv hi CursorLine cterm=reverse
+cnoreabbrev ru hi CursorLine cterm=underline
+"cnoreabbrev rb hi CursorLine cterm=bold
+cnoreabbrev ro hi CursorLine cterm=none
 " cnoreabbrev cs colorscheme
 
 " re-size Nerdtree Window Size
