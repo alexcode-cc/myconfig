@@ -4,7 +4,7 @@ set nocompatible             " be iMproved, required
 filetype off                 " required!
 
 " Setting up Vundle - the vim plugin bundler
-" git clone git@github.com:VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.Vim
+" git clone git@github.com:VundleVim/Vundle.vim.git ~/.vim/bundle/vundle.Vim
 " git clone git@github.com:lifepillar/vim-solarized8.git ~/.vim/pack/themes/opt/solarized8
 " Enable Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
