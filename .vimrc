@@ -56,6 +56,7 @@ syntax on
 set ruler
 set hlsearch
 set nu
+set cursorline
 
 " Set colorscheme
 "if has("termguicolors")
