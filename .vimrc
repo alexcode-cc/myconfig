@@ -4,7 +4,7 @@ set nocompatible             " be iMproved, required
 filetype off                 " required!
 
 " Setting up Vundle - the vim plugin bundler
-" git clone git@github.com:VundleVim/Vundle.vim.git ~/.vim/bundle/vundle.Vim
+" git clone git@github.com:alexcode-cc/Vundle.vim.git ~/.vim/bundle/vundle.Vim
 " git clone git@github.com:lifepillar/vim-solarized8.git ~/.vim/pack/themes/opt/solarized8
 " wget https://raw.githubusercontent.com/alexcode-cc/myconfig/main/.vimrc ~/.vimrc
 " Enable Vundle
@@ -14,7 +14,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Let Vundle manage Vundle - start
-Plugin 'VundleVim/Vundle.vim' " required
+Plugin 'alexcode-cc/Vundle.vim' " required
 
 " My Bundles here:
 Plugin 'scrooloose/nerdtree'
