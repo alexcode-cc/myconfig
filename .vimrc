@@ -111,6 +111,7 @@ cnoreabbrev rc e $MYVIMRC
 cnoreabbrev rl so $MYVIMRC
 cnoreabbrev hn set nohlsearch
 cnoreabbrev hy set hlsearch
+cnoreabbrev nn set nonu
 cnoreabbrev iy set ic
 cnoreabbrev in set noic
 cnoreabbrev dk set background=dark
