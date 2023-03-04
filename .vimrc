@@ -154,6 +154,7 @@ nmap <leader>r <C-r>
 nmap <leader>w <C-w>w
 nmap <leader>l :shell<cr>
 nmap <leader>- 10<C-w>-
+nmap <leader>a ^d0
 
 " vim-jsbeautify key mapping
 nmap <leader>h :call HtmlBeautify()<cr>
