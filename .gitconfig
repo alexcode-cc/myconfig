@@ -16,6 +16,9 @@
   ls = log --graph --pretty=format:'%h <%an> %ar %s' 
   st = status --short
   bv = branch -v
+  aconf = config --list --global                                                                                       
+  br = branch                                                                                                          
+  co = checkout  
   main = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
   ps = !git push && git switch main && git rebase develop && git push && git switch develop
   captag = tag -l -n1
