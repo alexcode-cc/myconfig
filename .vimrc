@@ -140,6 +140,9 @@ inoremap <DOWN> <NOP>
 inoremap <LEFT> <NOP>
 inoremap <RIGHT> <NOP>
 
+" Strip all trailing whitespace
+nnoremap <leader>g :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
+
 " Key Replace
 nmap <leader>s :w<cr>
 nmap <leader>q :q!<cr>
