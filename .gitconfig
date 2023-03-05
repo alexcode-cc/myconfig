@@ -23,6 +23,8 @@
   stable = switch stable
   develop = switch develop
   deploy = switch deploy
+  staging = switch staging                                                                                             
+  local = switch local  
   refactor = switch refactor
   test = switch test
   setmain = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
