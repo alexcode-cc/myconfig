@@ -14,6 +14,7 @@
   lgu = log --oneline --graph --author="user@email.com"
   ls = log --graph --pretty=format:'%h <%an> %ar %s' 
   st = status --short
+  sw = switch
   bv = branch -v
   aconf = config --list --global                                                                                       
   br = branch                                                                                                          
