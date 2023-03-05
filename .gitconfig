@@ -9,7 +9,6 @@
   ui = true
 [init]
   defaultBranch = main
-[gui]
 [alias]
   lg = log --oneline --graph
   lgu = log --oneline --graph --author="user@email.com"
@@ -19,11 +18,15 @@
   aconf = config --list --global                                                                                       
   br = branch                                                                                                          
   co = checkout  
-  main = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
+  main = switch main
+  stable = switch stable
+  develop = switch develop
+  refactor = switch refactor
+  test = switch test
+  setmain = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
   ps = !git push && git switch main && git rebase develop && git push && git switch develop
-  captag = tag -l -n1
+  captag = tag -l -n1 
   unstash = !git stash show -p | git apply -3 &\n& git stash drop
-[safe]
 [push]
   autoSetupRemote = True
 [pull]
