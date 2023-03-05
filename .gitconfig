@@ -1,0 +1,26 @@
+[user]                                                                                                                 
+  name = user
+  email = user@email.com
+[core]
+  editor = vim
+  autocrlf = false                                                                                                     
+  safecrlf = false    
+[color]
+  ui = true
+[init]
+  defaultBranch = main
+[gui]
+[alias]
+  lg = log --oneline --graph
+  lgu = log --oneline --graph --author="user@email.com"
+  ls = log --graph --pretty=format:'%h <%an> %ar %s' 
+  st = status --short
+  bv = branch -v
+  main = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
+  ps = !git push && git switch main && git rebase develop && git push && git switch develop
+  unstash = !git stash show -p | git apply -3 &\n& git stash drop
+[safe]
+[push]
+  autoSetupRemote = True
+[pull]
+  rebase = true
