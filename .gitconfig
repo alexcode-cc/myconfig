@@ -32,6 +32,7 @@
   psup = push --set-upstream origin
   captag = tag -l -n1 
   unstash = !git stash show -p | git apply -3 &\n& git stash drop
+  commit-auth = commit --amend --author="'User <user@email.com>'" --no-edit
 [push]
   autoSetupRemote = True
 [pull]
