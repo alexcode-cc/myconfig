@@ -34,6 +34,7 @@
   unstash = !git stash show -p | git apply -3 &\n& git stash drop
   commit-auth = commit --amend --author="'User <user@email.com>'" --no-edit
   clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
+  release = !git flow release start $1 && git flow release finish $1
 [push]
   autoSetupRemote = True
 [pull]
