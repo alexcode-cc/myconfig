@@ -19,7 +19,7 @@
   aconf = config --list --global                                                                                       
   br = branch                                                                                                          
   co = checkout
-  amend = commit --amend
+  amend = !git add . && git commit --amend
   main = switch main
   stable = switch stable
   develop = switch develop
