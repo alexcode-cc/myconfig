@@ -18,7 +18,8 @@
   bv = branch -v
   aconf = config --list --global                                                                                       
   br = branch                                                                                                          
-  co = checkout  
+  co = checkout
+  amend = commit --amend
   main = switch main
   stable = switch stable
   develop = switch develop
