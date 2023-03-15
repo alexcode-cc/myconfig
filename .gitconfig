@@ -19,6 +19,8 @@
   aconf = config --list --global                                                                                       
   br = branch                                                                                                          
   co = checkout
+  psbr = push -u origin --all
+  pstg = push -u origin --tags
   amend = !git add . && git commit --amend
   main = switch main
   stable = switch stable
