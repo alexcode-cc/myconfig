@@ -12,7 +12,8 @@
 [alias]
   lg = log --oneline --graph
   lgu = log --oneline --graph --author="user@email.com"
-  ls = log --graph --pretty=format:'%h <%an> %ar %s' 
+  ls = log --graph --pretty=format:'%h <%an> %ar %s'
+  lst = tag -n9
   st = status --short
   sw = switch
   bv = branch -v
