@@ -115,6 +115,7 @@ cnoreabbrev nn set nonu
 cnoreabbrev sn set nu
 cnoreabbrev iy set ic
 cnoreabbrev in set noic
+cnoreabbrev nt NERDTree
 cnoreabbrev dk set background=dark
 cnoreabbrev lt set background=light
 cnoreabbrev rv hi CursorLine cterm=reverse
