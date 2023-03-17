@@ -31,7 +31,8 @@
   local = switch local  
   refactor = switch refactor
   test = switch test
-  setmain = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
+  qmain = merge main --squash
+  smain = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
   ps = !git push && git switch main && git rebase develop && git push && git switch develop
   psup = push --set-upstream origin
   captag = tag -l -n1 
