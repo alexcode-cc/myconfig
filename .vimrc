@@ -19,20 +19,21 @@ Plugin 'alexcode-cc/Vundle.vim' " required
 " My Bundles here:
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-dispatch'
+Plugin 'tpope/vim-surround'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-surround'
 Plugin 'justinmk/vim-sneak'
 Plugin 'wellle/targets.vim'
 
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'powerline/powerline'
-"Plugin 'maksimr/vim-jsbeautify'
 "Plugin 'vimwiki/vimwiki'
-"Plugin 'tpope/vim-surround'
 "Plugin 'Yggdroot/indentLine'
 "Plugin 'altercation/vim-colors-solarized'
+
 " Let Vindle manage Plugins - end
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
