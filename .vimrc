@@ -123,6 +123,7 @@ cnoreabbrev rv hi CursorLine cterm=reverse
 cnoreabbrev ru hi CursorLine cterm=underline
 "cnoreabbrev rb hi CursorLine cterm=bold
 cnoreabbrev ro hi CursorLine cterm=none
+cnoreabbrev dm %s//\r/g
 " cnoreabbrev cs colorscheme
 
 " re-size Nerdtree Window Size
