@@ -162,6 +162,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias ohmyconfig="vim ~/.oh-my-zsh/oh-my-zsh.sh"
 alias vin="vim +NERDTree"
 alias vig="vim +NERDTree Gemfile"
+alias th="theme"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
