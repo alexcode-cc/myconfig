@@ -175,3 +175,12 @@ source ~/.zsh_aliases
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 echo `date` zshrc loaded.
+
+Exit_Clear_History() {
+	unset HISTFILE;
+	rm --force ~/.zsh_history;
+	HISTSIZE=0;
+}
+# Clear ZSH history after each exit.
+#trap 'unset HISTFILE; rm ~/.zsh_history;HISTSIZE=0;'
+trap Exit_Clear_History EXIT
