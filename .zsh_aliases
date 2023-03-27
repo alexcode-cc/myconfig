@@ -1,0 +1,17 @@
+# Usefully aliases
+echo zsh_aliases loading...
+alias zconfig="vim ~/.zshrc"
+alias zreload="source ~/.zshrc"
+alias zareload="source ~/.zsh_aliases"
+alias vconfig="vim ~/.vimrc"
+alias gconfig="vim ~/.gitconfig"
+alias gitignore="vim .gitignore"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias ohmyconfig="vim ~/.oh-my-zsh/oh-my-zsh.sh"
+alias vin="vim +NERDTree"
+alias vig="vim +NERDTree Gemfile"
+alias th="theme"
+alias lsth="lstheme"
+alias rth="set | grep RANDOM_THEME"
+echo zsh_aliases loaded

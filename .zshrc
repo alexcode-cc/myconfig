@@ -11,6 +11,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
+#ZSH_THEME="avit"
+#ZSH_THEME="alanpeabody"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -152,17 +154,20 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Usefully aliases
-alias zconfig="vim ~/.zshrc"
-alias zreload="source ~/.zshrc"
-alias vconfig="vim ~/.vimrc"
-alias gconfig="vim ~/.gitconfig"
-alias gitignore="vim .gitignore"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias ohmyconfig="vim ~/.oh-my-zsh/oh-my-zsh.sh"
-alias vin="vim +NERDTree"
-alias vig="vim +NERDTree Gemfile"
-alias th="theme"
+source ~/.zsh_aliases
+# alias zconfig="vim ~/.zshrc"
+# alias zreload="source ~/.zshrc"
+# alias zareload="source ~/.zsh_aliases"
+# alias vconfig="vim ~/.vimrc"
+# alias gconfig="vim ~/.gitconfig"
+# alias gitignore="vim .gitignore"
+# alias ohmyzsh="vim ~/.oh-my-zsh"
+# alias ohmyzsh="vim ~/.oh-my-zsh"
+# alias ohmyconfig="vim ~/.oh-my-zsh/oh-my-zsh.sh"
+# alias vin="vim +NERDTree"
+# alias vig="vim +NERDTree Gemfile"
+# alias th="theme"
+# alias thn="set | grep RANDOM_THEME"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
