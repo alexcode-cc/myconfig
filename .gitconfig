@@ -45,3 +45,6 @@
   autoSetupRemote = True
 [pull]
   rebase = true
+[pager]
+  log = false
+  branch = false
