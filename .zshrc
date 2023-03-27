@@ -77,17 +77,17 @@ ZSH_THEME="robbyrussell"
 plugins=(
 	alias-finder
 	aliases
-  	bundler
+	bundler
 	brew
 	capistrano
 	common-aliases
 	copyfile
 	copypath
-  	dotenv
+	dotenv
 	encode64
 	extract
 	gem
-  	git
+	git
 	git-flow
 	git-prompt
 	gitignore
@@ -96,7 +96,7 @@ plugins=(
 	jsontools
 	jump
 	last-working-dir
-  	macos
+	macos
 	man
 	node
 	nodenv
@@ -107,8 +107,8 @@ plugins=(
 	python
 	qrcode
 	rails
-  	rake
-  	ruby
+	rake
+	ruby
 	rvm
 	sudo
 	systemadmin
@@ -116,19 +116,22 @@ plugins=(
 	textmate
 	themes
 	tig
-  	timer
-  	transfer
-  	ubuntu
-  	ufw
-  	universalarchive
-  	urltools
-  	vi-mode
-  	vscode
-  	wd
-  	web-search
-  	yarn
+	timer
+	transfer
+	ubuntu
+	ufw
+	universalarchive
+	urltools
+	vi-mode
+	vscode
+	wd
+	web-search
+	yarn
+	zsh-autosuggestions
+	zsh-syntax-highlighting
 )
 zstyle :omz:plugins:iterm2 shell-integration yes
+export ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
