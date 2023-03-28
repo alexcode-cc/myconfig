@@ -23,6 +23,7 @@
   psbr = push -u origin --all
   pstg = push -u origin --tags
   amend = !git add . && git commit --amend
+  addm = !git ls-files --modified | xargs git add
   main = switch main
   stable = switch stable
   develop = switch develop
