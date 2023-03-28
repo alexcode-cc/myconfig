@@ -121,6 +121,7 @@ plugins=(
 	sudo
 	systemadmin
 	systemd
+	# for osx
 	textmate
 	themes
 	tig
@@ -181,11 +182,11 @@ autoload -U compinit && compinit -u
 echo `date` zshrc loaded.
 
 # for auto clearn history 
-Exit_Clear_History() {
-	unset HISTFILE;
-	rm --force ~/.zsh_history;
-	HISTSIZE=0;
-}
+#Exit_Clear_History() {
+#	unset HISTFILE;
+#	rm --force ~/.zsh_history;
+#	HISTSIZE=0;
+#}
 # Clear ZSH history after each exit.
-#trap 'unset HISTFILE; rm ~/.zsh_history;HISTSIZE=0;'
-trap Exit_Clear_History EXIT
+##trap 'unset HISTFILE; rm ~/.zsh_history;HISTSIZE=0;'
+#trap Exit_Clear_History EXIT
