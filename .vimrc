@@ -123,7 +123,8 @@ cnoreabbrev rv hi CursorLine cterm=reverse
 cnoreabbrev ru hi CursorLine cterm=underline
 "cnoreabbrev rb hi CursorLine cterm=bold
 cnoreabbrev ro hi CursorLine cterm=none
-cnoreabbrev dm %s//\r/g
+cnoreabbrev dm %s/
+/\r/g
 " cnoreabbrev cs colorscheme
 
 " re-size Nerdtree Window Size
@@ -162,6 +163,12 @@ nmap <leader>l :shell<cr>
 nmap <leader>- 10<C-w>-
 nmap <leader>a ^d0
 nmap <leader>z whdaw
+
+" visual mode
+" sudo apt install vim-gtk
+" copy to clipboard
+"
+vmap <leader>c "+y
 
 " vim-jsbeautify key mapping
 nmap <leader>h :call HtmlBeautify()<cr>
