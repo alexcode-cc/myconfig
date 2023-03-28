@@ -1,4 +1,5 @@
 echo `date` zshrc loading...
+# zshrc for osx
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -12,6 +13,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="avit"
+#ZSH_THEME="sport_256"
 #ZSH_THEME="alanpeabody"
 
 # Set list of themes to pick from when loading at random
@@ -74,10 +76,14 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+#
+#
 plugins=(
 	alias-finder
 	aliases
+	autojump
 	bundler
+	# for osx
 	brew
 	capistrano
 	common-aliases
@@ -92,10 +98,12 @@ plugins=(
 	git-prompt
 	gitignore
 	history
+	# for osx
 	iterm2
 	jsontools
 	jump
 	last-working-dir
+	# for osx
 	macos
 	man
 	node
@@ -130,8 +138,13 @@ plugins=(
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
+
+# for osx
 zstyle :omz:plugins:iterm2 shell-integration yes
+
+#	for zsh-autosuggestions
 export ZSH_DISABLE_COMPFIX=true
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -158,24 +171,16 @@ source $ZSH/oh-my-zsh.sh
 #
 # Usefully aliases
 source ~/.zsh_aliases
-# alias zconfig="vim ~/.zshrc"
-# alias zreload="source ~/.zshrc"
-# alias zareload="source ~/.zsh_aliases"
-# alias vconfig="vim ~/.vimrc"
-# alias gconfig="vim ~/.gitconfig"
-# alias gitignore="vim .gitignore"
-# alias ohmyzsh="vim ~/.oh-my-zsh"
-# alias ohmyzsh="vim ~/.oh-my-zsh"
-# alias ohmyconfig="vim ~/.oh-my-zsh/oh-my-zsh.sh"
-# alias vin="vim +NERDTree"
-# alias vig="vim +NERDTree Gemfile"
-# alias th="theme"
-# alias thn="set | grep RANDOM_THEME"
 
+# for osx
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+[[ -s /home/alex/.autojump/etc/profile.d/autojump.sh ]] && source /home/alex/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
 
 echo `date` zshrc loaded.
 
+# for auto clearn history 
 Exit_Clear_History() {
 	unset HISTFILE;
 	rm --force ~/.zsh_history;
