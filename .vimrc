@@ -1,5 +1,6 @@
+"
 " Vundle Enable vimrc
-" ------------------------------------------------------------------------------------------------    -
+"
 set nocompatible             " be iMproved, required
 filetype off                 " required!
 
@@ -68,7 +69,7 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " enable true color
 "set termguicolors
 "t_Co means terminal color
-set t_Co=256 
+set t_Co=256
 "set background=dark
 set background=light
 "colorscheme solarized-old
@@ -176,6 +177,12 @@ nmap <leader>c :call CSSBeautify()<cr>
 nmap <leader>j :call JsBeautify()<cr>
 nmap <leader>n :call JsonBeautify()<cr>
 nmap <leader>x :call JsxBeautify()<cr>
+
+" visual mode
+" sudo apt install vim-gtk
+" copy to clipboard
+"
+vmap <leader>c "+y
 
 "automatically when vim starts up.
 "autocmd vimenter * NERDTree
