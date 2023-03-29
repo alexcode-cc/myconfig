@@ -1,10 +1,10 @@
-[user]                                                                                                                 
+[user]
   name = user
   email = user@email.com
 [core]
   editor = vim
-  autocrlf = false                                                                                                     
-  safecrlf = false    
+  autocrlf = false
+  safecrlf = false
 [color]
   ui = true
 [init]
@@ -17,26 +17,29 @@
   st = status --short
   sw = switch
   bv = branch -v
-  aconf = config --list --global                                                                                       
-  br = branch                                                                                                          
+  aconf = config --list --global
+  br = branch
   co = checkout
   psbr = push -u origin --all
   pstg = push -u origin --tags
   amend = !git add . && git commit --amend
-  addm = !git ls-files --modified | xargs git add
+	addm = !git ls-files --modified | xargs git add
+	origin = remote show origin
+	psbr = push -u origin --all
+	pstg = push -u origin --tags
   main = switch main
   stable = switch stable
   develop = switch develop
   deploy = switch deploy
-  staging = switch staging                                                                                             
-  local = switch local  
+  staging = switch staging
+  local = switch local
   refactor = switch refactor
   test = switch test
   qmain = merge main --squash
   smain = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
   ps = !git push && git switch main && git rebase develop && git push && git switch develop
   psup = push --set-upstream origin
-  captag = tag -l -n1 
+  captag = tag -l -n1
   unstash = !git stash show -p | git apply -3 &\n& git stash drop
   commit-auth = commit --amend --author="'User <user@email.com>'" --no-edit
   clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
@@ -47,5 +50,5 @@
 [pull]
   rebase = true
 [pager]
-  log = false
-  branch = false
+#  log = false
+#  branch = false
