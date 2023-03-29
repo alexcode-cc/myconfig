@@ -10,11 +10,14 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="avit"
 #ZSH_THEME="sport_256"
 #ZSH_THEME="alanpeabody"
+#ZSH_THEME="dogenpunk"
+#ZSH_THEME="Soliah"
+ZSH_THEME="suvash"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,65 +82,65 @@ ZSH_THEME="robbyrussell"
 #
 #
 plugins=(
-	alias-finder
-	aliases
-	autojump
-	bundler
-	# for osx
-	brew
-	capistrano
-	common-aliases
-	copyfile
-	copypath
-	dotenv
-	encode64
-	extract
-	gem
-	git
-	git-flow
-	git-prompt
-	gitignore
-	history
-	# for osx
-	iterm2
-	jsontools
-	jump
-	last-working-dir
-	# for osx
-	macos
-	man
-	node
-	nodenv
-	npm
-	nvm
-	pip
-	pylint
-	python
-	qrcode
-	rails
-	rake
-	ruby
-	rvm
-	sudo
-	systemadmin
-	systemd
-	# for osx
-	textmate
-	themes
-	tig
-	timer
-	transfer
-	ubuntu
-	ufw
-	universalarchive
-	urltools
-	vi-mode
-	vscode
-	wd
-	web-search
-	yarn
-	zsh-autosuggestions
-	zsh-syntax-highlighting
+  alias-finder
+  aliases
+  autojump
+  bundler
+  # for osx
+  brew
+  capistrano
+  common-aliases
+  copyfile
+  copypath
+  dotenv
+  encode64
+  emoji
+  extract
+  gem
+  git
+  git-flow
+  git-prompt
+  gitignore
+  history
+  # for osx
+  item2
+  jsontools
+  jump
+  last-working-dir
+  # for osx
+  macos
+  man
+  node
+  nodenv
+  npm
+  nvm
+  pip
+  pylint
+  python
+  qrcode
+  rails
+  rake
+  ruby
+  rvm
+  sudo
+  systemadmin
+  systemd
+  textmate
+  themes
+  tig
+  timer
+  transfer
+  ubuntu
+  ufw
+  universalarchive
+  urltools
+  vi-mode
+  vscode
+  wd
+  web-search
+  yarn
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 # for osx
@@ -182,11 +185,11 @@ autoload -U compinit && compinit -u
 echo `date` zshrc loaded.
 
 # for auto clearn history 
-#Exit_Clear_History() {
-#	unset HISTFILE;
-#	rm --force ~/.zsh_history;
-#	HISTSIZE=0;
-#}
+# Exit_Clear_History() {
+# 	unset HISTFILE;
+# 	rm --force ~/.zsh_history;
+# 	HISTSIZE=0;
+# }
 # Clear ZSH history after each exit.
 ##trap 'unset HISTFILE; rm ~/.zsh_history;HISTSIZE=0;'
 #trap Exit_Clear_History EXIT
