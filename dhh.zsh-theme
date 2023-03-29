@@ -4,10 +4,15 @@ function prompt_char {
     echo '○'
 }
 
+function prompt_ruby {
+  [ -f $HOME/.rvm/bin/rvm-prompt ] || return 1
+  rvm_prompt=$($HOME/.rvm/bin/rvm-prompt v 2>/dev/null)
+  [[ -z "${rvm_prompt}" ]] && return 1
+  echo "${rvm_prompt}"
+}
+
+PROMPT_RUBY='%F{blue}'$(prompt_ruby)'%f'
 PROMPT_DIR='%F{yellow}%c%f%b'
 PROMPT_USER='%F{magenta}%n%f'
-PROMPT_RUBY=$(ruby_prompt_info)
-PROMPT_GEMSET='%F{blue}'${PROMPT_RUBY:18}'%f'
 
-#PROMPT='${PROMPT_USER} ${PROMPT_GEMSET} ${PROMPT_DIR}$(git_prompt_info) $(prompt_char) '
-PROMPT='${PROMPT_USER} ${PROMPT_GEMSET} ${PROMPT_DIR} $(prompt_char) '
+PROMPT='${PROMPT_USER} ${PROMPT_RUBY} ${PROMPT_DIR} $(prompt_char) '

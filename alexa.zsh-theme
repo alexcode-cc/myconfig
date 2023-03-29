@@ -58,21 +58,30 @@ function virtualenv_info {
     [[ -n "$VIRTUAL_ENV" ]] && echo '('${VIRTUAL_ENV:t}') '
 }
 
-#ZSH_THEME_GIT_PROMPT_PREFIX=' %F{magenta}'
-#ZSH_THEME_GIT_PROMPT_SUFFIX='%f'
-#ZSH_THEME_GIT_PROMPT_DIRTY='%F{green}!'
-#ZSH_THEME_GIT_PROMPT_UNTRACKED='%F{green}?'
-#ZSH_THEME_GIT_PROMPT_CLEAN=''
+function prompt_ruby {
+  [ -f $HOME/.rvm/bin/rvm-prompt ] || return 1
+  rvm_prompt=$($HOME/.rvm/bin/rvm-prompt v 2>/dev/null)
+  [[ -z "${rvm_prompt}" ]] && return 1
+  echo "${rvm_prompt}"
+}
+
+PROMPT_RUBY='%F{blue}'$(prompt_ruby)'%f'
+
+ZSH_THEME_GIT_PROMPT_PREFIX='%F{magenta}'
+ZSH_THEME_GIT_PROMPT_SUFFIX='%f'
+ZSH_THEME_GIT_PROMPT_DIRTY='%F{green}!'
+ZSH_THEME_GIT_PROMPT_UNTRACKED='%F{green}?'
+ZSH_THEME_GIT_PROMPT_CLEAN=''
+
 #ZSH_THEME_RUBY_PROMPT_PREFIX=' using %F{red}'
 #ZSH_THEME_RUBY_PROMPT_SUFFIX='%f'
 
-PROMPT_DIR='%F{green}%c%f%b'
-PROMPT_HOST='%F{yellow}%m%f%B'
+PROMPT_DIR='%F{green}%c%f'
+PROMPT_HOST='%F{yellow}%m%f'
 PROMPT_USER='%F{magenta}%n%f'
 PROMPT_TIME='%F{cyan}%D{%I:%M:%S}%f'
 PROMPT_HISTORY='%F{blue}%!%f'
-PROMPT_RUBY=$(ruby_prompt_info)
-PROMPT_GEMSET='%F{31}'${PROMPT_RUBY:18}'%f'
+#PROMPT_GIT='%F{red}'$(git_prompt_info)'%f'
 
-PROMPT='${PROMPT_USER}@${PROMPT_HOST} ${PROMPT_DIR} ${PROMPT_GEMSET}$(git_prompt_info) $(git_time_since_commit) ${PROMPT_TIME}
+PROMPT='${PROMPT_USER}@${PROMPT_HOST} ${PROMPT_DIR} ${PROMPT_RUBY} $(git_prompt_info) $(git_time_since_commit) ${PROMPT_TIME}
 ${PROMPT_HISTORY}$(virtualenv_info) $(prompt_char) '
