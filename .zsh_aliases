@@ -1,7 +1,7 @@
 # Usefully aliases
 echo zsh_aliases loading...
 alias zconfig="vim ~/.zshrc"
-alias zreload="source ~/.zshrc"
+alias zreload="omz reload"
 alias zaconfig="vim ~/.zsh_aliases"
 alias zareload="source ~/.zsh_aliases"
 alias vconfig="vim ~/.vimrc"
@@ -12,6 +12,8 @@ alias ohmyconfig="vim ~/.oh-my-zsh/oh-my-zsh.sh"
 alias vin="vim +NERDTree"
 alias vig="vim +NERDTree Gemfile"
 alias th="theme"
+alias tha="theme alexa"
+alias thd="theme dhh"
 alias lsth="lstheme"
 alias rth="set | grep RANDOM_THEME"
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
