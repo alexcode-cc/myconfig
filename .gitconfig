@@ -5,7 +5,7 @@
   editor = vim
   autocrlf = false
   safecrlf = false
-	#pager = cat
+  #pager = cat
 [color]
   ui = true
 [init]
@@ -16,18 +16,19 @@
   ls = !git --no-pager log -20 --graph --pretty=format:'%h <%an> %ar %s'
   bv = !git --no-pager branch -v
   br = !git --no-pager branch
-	lst = !git --no-pager tag -n9
+  lst = !git --no-pager tag -n9
   st = status --short
-	lsm = ls-files --modified
-	addm = !git ls-files --modified | xargs git add
+  lsm = ls-files --modified
+  addm = !git ls-files --modified | xargs git add
   aconf = config --list --global
   co = checkout
-	amend = !git add . && git commit --amend
-	origin = remote show origin
-	psbr = push -u origin --all
-	pstg = push -u origin --tags
+  amend = !git add . && git commit --amend
+  origin = remote show origin
+  psbr = push -u origin --all
+  pstg = push -u origin --tags
   sw = switch
   main = switch main
+  master = switch master
   stable = switch stable
   develop = switch develop
   deploy = switch deploy
@@ -35,7 +36,7 @@
   local = switch local
   refactor = switch refactor
   test = switch test
-	qmain = merge main --squash
+  qmain = merge main --squash
   smain = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
   ps = !git push && git switch main && git rebase develop && git push && git switch develop
   psup = push --set-upstream origin
@@ -43,12 +44,12 @@
   unstash = !git stash show -p | git apply -3 &\n& git stash drop
   commit-auth = commit --amend --author="'user <user@email.com>'" --no-edit
   clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
-	release = !git flow release start $1 && git flow release finish $1
-	psflow = !git switch main && git push && git push --tags && git switch develop && git merge main && git push 
+  release = !git flow release start $1 && git flow release finish $1
+  psflow = !git switch main && git push && git push --tags && git switch develop && git merge main && git push 
 [push]
   autoSetupRemote = True
 [pull]
   rebase = true
 [pager]
-#	log = false
-#	branch = false
+#  log = false
+#  branch = false
