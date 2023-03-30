@@ -4,15 +4,17 @@ function prompt_char {
     echo '○'
 }
 
-function prompt_ruby {
-  [ -f $HOME/.rvm/bin/rvm-prompt ] || return 1
-  rvm_prompt=$($HOME/.rvm/bin/rvm-prompt v 2>/dev/null)
-  [[ -z "${rvm_prompt}" ]] && return 1
-  echo "${rvm_prompt}"
+# Determine if we are using a rvm ruby.
+function rvm_ruby() {
+    if hash rvm 2>/dev/null; then
+        RVM_RUBY=`rvm gemset list | grep 'gemsets for ruby-' | cut -b 18- | cut -d '(' -f 1`
+        if [[ -n $RVM_RUBY ]]; then
+            echo "%{$fg[blue]%}$RVM_RUBY%{$reset_color%}"
+        fi 
+    fi
 }
 
-PROMPT_RUBY='%F{blue}'$(prompt_ruby)'%f'
 PROMPT_DIR='%F{yellow}%c%f%b'
 PROMPT_USER='%F{magenta}%n%f'
 
-PROMPT='${PROMPT_USER} ${PROMPT_RUBY} ${PROMPT_DIR} $(prompt_char) '
+PROMPT='${PROMPT_USER} $(rvm_ruby)${PROMPT_DIR} $(prompt_char) '
