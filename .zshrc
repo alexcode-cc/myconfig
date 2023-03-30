@@ -1,4 +1,4 @@
-echo `date` zshrc loading...
+echo `date` => zshrc loading...
 # zshrc for osx
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -10,14 +10,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-#ZSH_THEME="agnoster"
-#ZSH_THEME="avit"
-#ZSH_THEME="sport_256"
-#ZSH_THEME="alanpeabody"
-#ZSH_THEME="dogenpunk"
-#ZSH_THEME="Soliah"
-ZSH_THEME="suvash"
+#ZSH_THEME="robbyrussell","agnoster","avit","sport_256","alanpeabody","dogenpunk","Soliah","suvash"
+ZSH_THEME="dhh"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -82,72 +76,81 @@ ZSH_THEME="suvash"
 #
 #
 plugins=(
-  alias-finder
-  aliases
-  autojump
-  bundler
-  # for osx
-  brew
-  capistrano
-  common-aliases
-  copyfile
-  copypath
-  dotenv
-  encode64
-  emoji
-  extract
-  gem
+  #alias-finder
+  #aliases
+  #autojump
+  #bundler
+
+  # for OSx
+  #brew
+
+  #capistrano
+  #common-aliases
+  #copyfile
+  #copypath
+  #dotenv
+  #encode64
+  #emoji
+  #extract
+  #gem
   git
   git-flow
   git-prompt
   gitignore
-  history
-  # for osx
-  item2
-  jsontools
+  #history
+
+  # for OSX
+  #item2
+
+  #jsontools
   jump
-  last-working-dir
-  # for osx
-  macos
-  man
-  node
-  nodenv
-  npm
-  nvm
-  pip
-  pylint
-  python
-  qrcode
-  rails
-  rake
-  ruby
-  rvm
-  sudo
-  systemadmin
-  systemd
-  textmate
+  #last-working-dir
+
+  # for OSX
+  #macos
+
+  #man
+  #node
+  #nodenv
+  #npm
+  #nvm
+  #pip
+  #pylint
+  #python
+  #qrcode
+  #rails
+  #rake
+  #ruby
+  #rvm
+  #sudo
+  #systemadmin
+  #systemd
+
+	# for OSX
+  #textmate
+
   themes
-  tig
-  timer
-  transfer
-  ubuntu
-  ufw
-  universalarchive
-  urltools
-  vi-mode
-  vscode
-  wd
-  web-search
-  yarn
+  #tig
+  #timer
+  #transfer
+  #ubuntu
+  #ufw
+  #universalarchive
+  #urltools
+  #vi-mode
+  #vscode
+  #wd
+  #web-search
+  #yarn
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
 
-# for osx
-zstyle :omz:plugins:iterm2 shell-integration yes
+# for OSX
+#zstyle :omz:plugins:iterm2 shell-integration yes
 
 #	for zsh-autosuggestions
-export ZSH_DISABLE_COMPFIX=true
+#export ZSH_DISABLE_COMPFIX=true
 
 source $ZSH/oh-my-zsh.sh
 
@@ -176,20 +179,18 @@ source $ZSH/oh-my-zsh.sh
 # Usefully aliases
 source ~/.zsh_aliases
 
-# for osx
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# for OSX
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-[[ -s /home/alex/.autojump/etc/profile.d/autojump.sh ]] && source /home/alex/.autojump/etc/profile.d/autojump.sh
-autoload -U compinit && compinit -u
+#[[ -s /home/alex/.autojump/etc/profile.d/autojump.sh ]] && source /home/alex/.autojump/etc/profile.d/autojump.sh
+#autoload -U compinit && compinit -u
 
-echo `date` zshrc loaded.
+echo `date` => zshrc loaded.
 
-# for auto clearn history 
-# Exit_Clear_History() {
-# 	unset HISTFILE;
-# 	rm --force ~/.zsh_history;
-# 	HISTSIZE=0;
-# }
-# Clear ZSH history after each exit.
-##trap 'unset HISTFILE; rm ~/.zsh_history;HISTSIZE=0;'
-#trap Exit_Clear_History EXIT
+#Clear ZSH history after each exit.
+Exit_Clear_History() {
+	unset HISTFILE;
+	rm --force ~/.zsh_history;
+	HISTSIZE=0;
+}
+trap Exit_Clear_History EXIT
