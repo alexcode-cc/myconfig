@@ -23,6 +23,7 @@
   psbr = push -u origin --all
   pstg = push -u origin --tags
   amend = !git add . && git commit --amend
+	lsm = ls-files --modified
 	addm = !git ls-files --modified | xargs git add
 	origin = remote show origin
 	psbr = push -u origin --all
