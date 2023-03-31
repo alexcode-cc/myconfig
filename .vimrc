@@ -166,12 +166,6 @@ nmap <leader>a ^d0i<tab>
 nmap <leader>A ^d0
 nmap <leader>z whdaw
 
-" visual mode
-" sudo apt install vim-gtk
-" copy to clipboard
-"
-vmap <leader>c "+y
-
 " vim-jsbeautify key mapping
 nmap <leader>h :call HtmlBeautify()<cr>
 nmap <leader>c :call CSSBeautify()<cr>
