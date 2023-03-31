@@ -22,6 +22,8 @@
   addm = !git ls-files --modified | xargs git add
   aconf = config --list --global
   co = checkout
+  unstage = restore --staged *
+  undochange = restore *
   amend = !git add . && git commit --amend
   origin = remote show origin
   psbr = push -u origin --all
