@@ -162,7 +162,8 @@ nmap <leader>r <C-r>
 nmap <leader>w <C-w>w
 nmap <leader>l :shell<cr>
 nmap <leader>- 10<C-w>-
-nmap <leader>a ^d0
+nmap <leader>a ^d0i<tab>
+nmap <leader>A ^d0
 nmap <leader>z whdaw
 
 " visual mode
