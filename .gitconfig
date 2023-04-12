@@ -28,6 +28,7 @@
   origin = remote show origin
   psbr = push -u origin --all
   pstg = push -u origin --tags
+  psall = !git push --all && git push --tags
   sw = switch
   main = switch main
   master = switch master
