@@ -12,6 +12,7 @@
   defaultBranch = main
 [alias]
   lg = !git --no-pager log -20 --oneline --graph
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
   lgu = !git --no-pager log -20 --oneline --graph --author="user@email.com"
   ls = !git --no-pager log -20 --graph --pretty=format:'%h <%an> %ar %s'
   bv = !git --no-pager branch -v
