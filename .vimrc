@@ -124,8 +124,7 @@ cnoreabbrev rv hi CursorLine cterm=reverse
 cnoreabbrev ru hi CursorLine cterm=underline
 "cnoreabbrev rb hi CursorLine cterm=bold
 cnoreabbrev ro hi CursorLine cterm=none
-cnoreabbrev dm %s/
-/\r/g
+cnoreabbrev dm %s/^M/\r/g
 " cnoreabbrev cs colorscheme
 
 " re-size Nerdtree Window Size
@@ -162,9 +161,10 @@ nmap <leader>r <C-r>
 nmap <leader>w <C-w>w
 nmap <leader>l :shell<cr>
 nmap <leader>- 10<C-w>-
-nmap <leader>a ^d0i<tab>
-nmap <leader>A ^d0
 nmap <leader>z whdaw
+" for yml
+nmap <leader>a j^d0i<space><space><esc>
+nmap <leader>A ^d0
 
 " vim-jsbeautify key mapping
 nmap <leader>h :call HtmlBeautify()<cr>
