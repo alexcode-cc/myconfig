@@ -3,7 +3,7 @@ echo bash_aliases loading...
 alias bconfig="vim ~/.bashrc"
 alias breload="source ~/.bashrc"
 alias baconfig="vim ~/.bash_aliases"
-alias bareload="source ~/.zsh_aliases"
+alias bareload="source ~/.bash_aliases"
 alias vconfig="vim ~/.vimrc"
 alias gconfig="vim ~/.gitconfig"
 alias gitignore="vim .gitignore"
