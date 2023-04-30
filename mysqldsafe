@@ -1,0 +1,2 @@
+#!/bin/zsh
+$(brew --prefix mariadb)/bin/mysqld_safe --skip-grant-tables --skip-networking
