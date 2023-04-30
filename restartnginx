@@ -1,0 +1,3 @@
+#!/bin/zsh
+rm /usr/local/var/log/nginx/error.log
+brew services restart nginx && brew services info nginx
