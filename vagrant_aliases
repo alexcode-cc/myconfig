@@ -1,0 +1,12 @@
+# Vagrant commands
+alias vup="vagrant up"
+alias vupp="vagrant up --provision"
+alias vdown="vagrant halt"
+alias vhelp="vagrant help"
+alias vstat="vagrant status"
+alias vssh="vagrant ssh"
+alias vbox="vagrant box $@"
+alias vsnap="vagrant snapshot $@"
+alias vpack="vagrant package --base $@"
+alias vedit="vim Vagrantfile"
+#
