@@ -1,0 +1,3 @@
+#!/bin/zsh
+rvm list
+rvm gemset list
