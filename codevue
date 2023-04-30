@@ -1,0 +1,2 @@
+#!/bin/zsh
+code --user-data-dir $HOME/.vscode-vue --extensions-dir $HOME/.vscode-vue/extensions $*
