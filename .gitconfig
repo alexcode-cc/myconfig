@@ -30,6 +30,8 @@
   psbr = push -u origin --all
   pstg = push -u origin --tags
   psall = !git push --all && git push --tags
+  psmodule = pull --recurse-submodules
+  initmodule = submodule update --init --recursive
   sw = switch
   main = switch main
   master = switch master
