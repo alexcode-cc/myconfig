@@ -37,6 +37,7 @@
   master = switch master
   stable = switch stable
   develop = switch develop
+  customize = switch customize
   deploy = switch deploy
   staging = switch staging
   local = switch local
