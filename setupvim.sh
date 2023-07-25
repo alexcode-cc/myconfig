@@ -4,7 +4,7 @@
 sudo apt update
 
 # Install Git and Vim
-sudo apt install -y vim git
+sudo apt install -y vim git curl wget
 
 # Set the vim plugin manager
 mkdir -p ~/.vim/autoload ~/.vim/bundle
