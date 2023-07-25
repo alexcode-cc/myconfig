@@ -162,9 +162,11 @@ nmap <leader>y <C-y>
 nmap <leader>v <C-v>
 nmap <leader>r <C-r>
 nmap <leader>w <C-w>w
-nmap <leader>l :shell<cr>
 nmap <leader>- 10<C-w>-
 nmap <leader>z whdaw
+nmap <leader>m :m+<cr> 
+nmap <leader>l :m-2<cr> 
+
 " for yml
 nmap <leader>a j^d0i<space><space><esc>
 nmap <leader>A ^d0
