@@ -20,7 +20,7 @@ echo "map <UP> <NOP>" >> ~/.vimrc && echo "map <DOWN> <NOP>" >> ~/.vimrc && echo
 echo "nmap <leader>s :w<cr>" >> ~/.vimrc  && echo "nmap <leader>q :q!<cr>" >> ~/.vimrc && echo "nmap <leader>f <C-f>" >> ~/.vimrc  && echo "nmap <leader>b <C-b>" >> ~/.vimrc && echo "nmap <leader>w <C-w>w" >> ~/.vimrc  && echo "nmap <leader>z whdaw" >> ~/.vimrc && echo "nnoremap <leader>g :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>" >> ~/.vimrc && echo "nmap <leader>- 10<C-w>-" 
 
 # Set Vim's command aliases
-echo "cnoreabbrev rc e $MYVIMRC" >> ~/.vimrc  && echo "cnoreabbrev rl so $MYVIMRC" >> ~/.vimrc  && echo "cnoreabbrev nt NERDTree" >> ~/.vimrc
+echo "cnoreabbrev rc e ~/.vimrc" >> ~/.vimrc  && echo "cnoreabbrev rl so ~/.vimrc" >> ~/.vimrc  && echo "cnoreabbrev nt NERDTree" >> ~/.vimrc
 
 # Set Vim's command 
 echo ":command -nargs=* -complete=help H vertical belowright help <args>" >> ~/.vimrc
