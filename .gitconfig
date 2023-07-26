@@ -11,6 +11,7 @@
 [init]
   defaultBranch = main
 [alias]
+  devinit = !git branch main && git branch develop && git flow init -f
   lg = !git --no-pager log -20 --oneline --graph
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
   lgu = !git --no-pager log -20 --oneline --graph --author="user@email.com"
@@ -37,12 +38,13 @@
   master = switch master
   stable = switch stable
   develop = switch develop
-  customize = switch customize
   deploy = switch deploy
   staging = switch staging
   local = switch local
   refactor = switch refactor
   test = switch test
+  mgmain = merge main
+  mgdevelop = merge develop  
   qmain = merge main --squash
   smain = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
   ps = !git push && git switch main && git rebase develop && git push && git switch develop
