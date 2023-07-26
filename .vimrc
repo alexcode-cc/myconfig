@@ -19,16 +19,15 @@ Plugin 'alexcode-cc/Vundle.vim' " required
 
 " My Bundles here:
 Plugin 'scrooloose/nerdtree'
+Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-rails'
-Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-surround'
 Plugin 'maksimr/vim-jsbeautify'
-Plugin 'mattn/emmet-vim'
-Plugin 'justinmk/vim-sneak'
-Plugin 'wellle/targets.vim'
-
+"Plugin 'pearofducks/ansible-vim'
+"Plugin 'wellle/targets.vim'
+"Plugin 'tpope/vim-bundler'
+"Plugin 'tpope/vim-dispatch'
+"Plugin 'tpope/vim-surround'
+"Plugin 'justinmk/vim-sneak'
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'powerline/powerline'
@@ -99,20 +98,32 @@ set noexpandtab
 "set shiftround    " round indent to multiple of 'shiftwidth'
 "set autoindent    " align the new line indent with the previous line
 
+" for ansible syntastic
+"let g:syntastic_enable_highlighting = 1
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 1
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+" ignore files of Ansible Roles.
+"let g:syntastic_ignore_files = ['\m^roles/']
+"let g:syntastic_quiet_messages = { "type": "style" }
+
 " define OpenURL (Linux)
 ":command -bar -nargs=1 OpenURL :!firefox <targs>
 ":command -bar -nargs=1 OpenURL :!w3m <targs>
 " define OpenURL (Windows)
 ":command -bar -nargs=1 OpenURL :!start cmd /cstart /b <args>
 " define OpenURL (OSX)
-:command -bar -nargs=1 OpenURL :!open <args>
+":command -bar -nargs=1 OpenURL :!open <args>
 
 " pen a vertical help with the :H command
 :command -nargs=* -complete=help H vertical belowright help <args>
 
 " Command Alias
-cnoreabbrev rc e $MYVIMRC
-cnoreabbrev rl so $MYVIMRC
+cnoreabbrev rc e ~/.vimrc
+cnoreabbrev rl so ~/.vimrc
 cnoreabbrev hn set nohlsearch
 cnoreabbrev hy set hlsearch
 cnoreabbrev nn set nonu
@@ -165,10 +176,12 @@ nmap <leader>w <C-w>w
 nmap <leader>- 10<C-w>-
 nmap <leader>z whdaw
 nmap <leader>m :m+<cr> 
-nmap <leader>l :m-2<cr> 
+nmap <leader>l :m-2<cr>
+nmap <leader>L :shell<cr>
 
 " for yml
-nmap <leader>a j^d0i<space><space><esc>
+"nmap <leader>a j^d0i<space><space><esc>
+nmap <leader>a ^d0i<tab>
 nmap <leader>A ^d0
 
 " vim-jsbeautify key mapping
