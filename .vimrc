@@ -52,6 +52,7 @@ filetype plugin indent on    " required
 
 let g:screen_size_restore_pos = 1
 let g:user_emmet_expandabbr_key = '<tab>'
+let g:user_emmet_mode= 'n'
 
 syntax on
 "syntax enable
