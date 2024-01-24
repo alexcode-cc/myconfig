@@ -18,10 +18,10 @@ call vundle#begin()
 Plugin 'alexcode-cc/Vundle.vim' " required
 
 " My Bundles here:
-Plugin 'scrooloose/nerdtree'
-Plugin 'mattn/emmet-vim'
-Plugin 'tpope/vim-rails'
 Plugin 'maksimr/vim-jsbeautify'
+Plugin 'scrooloose/nerdtree'
+"Plugin 'mattn/emmet-vim'
+"Plugin 'tpope/vim-rails'
 "Plugin 'pearofducks/ansible-vim'
 "Plugin 'wellle/targets.vim'
 "Plugin 'tpope/vim-bundler'
@@ -74,9 +74,9 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set t_Co=256
 "set background=dark
 set background=light
+colorscheme solarized8_flat
 "colorscheme solarized-old
 "colorscheme solarized
-colorscheme solarized8_flat
 "colorscheme wwdc16
 "else
 "set background=dark
@@ -113,7 +113,7 @@ set noexpandtab
 
 " define OpenURL (Linux)
 ":command -bar -nargs=1 OpenURL :!firefox <targs>
-":command -bar -nargs=1 OpenURL :!w3m <targs>
+:command -bar -nargs=1 OpenURL :!w3m <targs>
 " define OpenURL (Windows)
 ":command -bar -nargs=1 OpenURL :!start cmd /cstart /b <args>
 " define OpenURL (OSX)
