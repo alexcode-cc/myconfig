@@ -140,6 +140,8 @@ cnoreabbrev ru hi CursorLine cterm=underline
 cnoreabbrev ro hi CursorLine cterm=none
 cnoreabbrev dm %s/^M/\r/g
 " cnoreabbrev cs colorscheme
+" delete all empty lines
+cnoreabbrev ds g/^$/d
 
 " re-size Nerdtree Window Size
 "cnoreabbrev ns let g:NERDTreeWinSize = 20
