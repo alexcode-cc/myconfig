@@ -11,9 +11,14 @@
 [init]
   defaultBranch = main
 [alias]
+	undel = reflog --no-abbrev
+	merge-force-write = merge -X theirs
+	pushall = push --set-upstream origin --all
+	pushtags = push --set-upstream origin --tags
   devinit = !git branch main && git branch develop && git flow init -f
-  lg = !git --no-pager log -20 --oneline --graph
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
+  lg = !git log --oneline --graph
+  lgp = !git --no-pager log -20 --oneline --graph
   lgu = !git --no-pager log -20 --oneline --graph --author="user@email.com"
   ls = !git --no-pager log -20 --graph --pretty=format:'%h <%an> %ar %s'
   bv = !git --no-pager branch -v
