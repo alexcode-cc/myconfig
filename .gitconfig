@@ -11,6 +11,8 @@
 [init]
   defaultBranch = main
 [alias]
+  pushtag = push origin tag
+  tags = tag -l -n
   undel = reflog --no-abbrev
   merge-force-write = merge -X theirs
   pushall = push --set-upstream origin --all
@@ -21,6 +23,7 @@
   lgp = !git --no-pager log -20 --oneline --graph
   lgu = !git --no-pager log -20 --oneline --graph --author="user@email.com"
   ls = !git --no-pager log -20 --graph --pretty=format:'%h <%an> %ar %s'
+  oneline = !git --no-pager log --decorate=short --pretty=oneline
   bv = !git --no-pager branch -v
   br = !git --no-pager branch
   lst = !git --no-pager tag -n9
@@ -38,16 +41,19 @@
   psall = !git push --all && git push --tags
   psmodule = pull --recurse-submodules
   initmodule = submodule update --init --recursive
+  flowall = !git branch main && git branch develop && git flow init -f && git switch develop
   sw = switch
   main = switch main
   master = switch master
   stable = switch stable
+  dev = switch dev
   develop = switch develop
   deploy = switch deploy
   staging = switch staging
   local = switch local
   refactor = switch refactor
   test = switch test
+  merge-dev = switch merge-dev
   mgmain = merge main
   mgdevelop = merge develop  
   qmain = merge main --squash
@@ -67,3 +73,6 @@
 [pager]
 #  log = false
 #  branch = false
+[http]
+#sslVerify = false
+
