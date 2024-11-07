@@ -1,7 +1,5 @@
 # Usefully aliases
 echo bash_aliases loading...
-alias checklogin="cat /var/log/auth.log | grep 'Invalid user' | more"
-alias rmnode="npx rimraf ./node_modules/"
 alias bconfig="vim ~/.bashrc"
 alias breload="source ~/.bashrc"
 alias baconfig="vim ~/.bash_aliases"
@@ -13,6 +11,9 @@ alias vin="vim +NERDTree"
 alias vig="vim +NERDTree Gemfile"
 alias h="history"
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
+alias upkey='sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $1'
+alias checklogin="cat /var/log/auth.log | grep 'Invalid user' | more"
+alias rmnode="npx rimraf ./node_modules/"
 alias rvminfo="rvm list && rvm gemset list"
 # WSL Aliases
 alias cpwsl="cp -v $1 $WSLHOME/share/$1"
