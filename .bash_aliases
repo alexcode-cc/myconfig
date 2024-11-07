@@ -1,6 +1,7 @@
 # Usefully aliases
 echo bash_aliases loading...
 alias checklogin="cat /var/log/auth.log | grep 'Invalid user' | more"
+alias rmnode="npx rimraf ./node_modules/"
 alias bconfig="vim ~/.bashrc"
 alias breload="source ~/.bashrc"
 alias baconfig="vim ~/.bash_aliases"
