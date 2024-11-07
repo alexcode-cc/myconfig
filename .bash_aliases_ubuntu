@@ -13,6 +13,7 @@ alias vin="vim +NERDTree"
 alias vig="vim +NERDTree Gemfile"
 alias h="history"
 alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
+alias upkey='sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $1'
 alias rvminfo="rvm list && rvm gemset list"
 alias n16="nvm use 16.20.2"
 alias n18="nvm use 18.20.4"
