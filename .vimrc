@@ -182,6 +182,7 @@ nmap <leader>m :m+<cr>
 nmap <leader>l :m-2<cr>
 nmap <leader>L :shell<cr>
 nmap <leader>t :NERDTree<cr>
+nmap <leader>g :%s/\\\\/\//g<cr>
 
 " for yml
 "nmap <leader>a j^d0i<space><space><esc>
