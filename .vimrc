@@ -183,7 +183,7 @@ nmap <leader>t :terminal<cr>
 nmap <leader>m :m+<cr> 
 nmap <leader>l :m-2<cr>
 nmap <leader>L :shell<cr>
-nmap <leader>t :NERDTree<cr>
+nmap <leader>T :NERDTree<cr>
 nmap <leader>g :%s/\\\\/\//g<cr>
 
 " for yml
