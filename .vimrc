@@ -179,6 +179,7 @@ nmap <leader>r <C-r>
 nmap <leader>w <C-w>w
 nmap <leader>- 10<C-w>-
 nmap <leader>z whdaw
+nmap <leader>t :terminal<cr>
 nmap <leader>m :m+<cr> 
 nmap <leader>l :m-2<cr>
 nmap <leader>L :shell<cr>
