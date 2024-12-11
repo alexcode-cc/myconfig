@@ -20,6 +20,7 @@ Plugin 'alexcode-cc/Vundle.vim' " required
 " My Bundles here:
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'scrooloose/nerdtree'
+Plugin 'rust-lang/rust.vim'
 "Plugin 'mattn/emmet-vim'
 "Plugin 'tpope/vim-rails'
 "Plugin 'pearofducks/ansible-vim'
