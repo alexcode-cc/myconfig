@@ -21,6 +21,8 @@ Plugin 'alexcode-cc/Vundle.vim' " required
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'scrooloose/nerdtree'
 Plugin 'rust-lang/rust.vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'altercation/vim-colors-solarized'
 "Plugin 'mattn/emmet-vim'
 "Plugin 'tpope/vim-rails'
 "Plugin 'pearofducks/ansible-vim'
@@ -34,7 +36,6 @@ Plugin 'rust-lang/rust.vim'
 "Plugin 'powerline/powerline'
 "Plugin 'vimwiki/vimwiki'
 "Plugin 'Yggdroot/indentLine'
-"Plugin 'altercation/vim-colors-solarized'
 
 " Let Vindle manage Plugins - end
 " All of your Plugins must be added before the following line
@@ -75,10 +76,9 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set t_Co=256
 "set background=dark
 set background=light
-colorscheme solarized8_flat
-"colorscheme solarized-old
+colorschem gruvbox 
 "colorscheme solarized
-"colorscheme wwdc16
+"colorscheme solarized8_flat
 "else
 "set background=dark
 " set background=light
