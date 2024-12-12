@@ -182,6 +182,7 @@ nmap <leader>z whdaw
 nmap <leader>t :terminal<cr>
 nmap <leader>m :m+<cr> 
 nmap <leader>l :m-2<cr>
+nmap <leader>o :noh<cr>
 nmap <leader>L :shell<cr>
 nmap <leader>T :NERDTree<cr>
 nmap <leader>g :%s/\\\\/\//g<cr>
