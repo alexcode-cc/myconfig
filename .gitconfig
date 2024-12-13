@@ -5,19 +5,26 @@
   editor = vim
   autocrlf = false
   safecrlf = false
+  #useBuiltinFSMonitor = true
   #pager = cat
 [color]
   ui = true
 [init]
   defaultBranch = main
 [alias]
+	initmain = !git init && git switch --create main 
+  initmodule = submodule update --init --recursive
+
+	devinit = !git branch main && git branch develop && git switch main && git flow init -f && git switch develop
+
+	#pullallremote= !git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+
   pushtag = push origin tag
   tags = tag -l -n
   undel = reflog --no-abbrev
   merge-force-write = merge -X theirs
   pushall = push --set-upstream origin --all
   pushtags = push --set-upstream origin --tags
-  devinit = !git branch main && git branch develop && git flow init -f
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
   lg = !git log --oneline --graph
   lgp = !git --no-pager log -20 --oneline --graph
@@ -40,23 +47,26 @@
   pstg = push -u origin --tags
   psall = !git push --all && git push --tags
   psmodule = pull --recurse-submodules
-  initmodule = submodule update --init --recursive
-  flowall = !git branch main && git branch develop && git flow init -f && git switch develop
+
   sw = switch
   main = switch main
+  wsl = switch wsl
   master = switch master
   stable = switch stable
   dev = switch dev
   develop = switch develop
+  vagrant = switch vagrant
   deploy = switch deploy
   staging = switch staging
   local = switch local
   refactor = switch refactor
   test = switch test
   merge-dev = switch merge-dev
+
   mgmain = merge main
   mgdevelop = merge develop  
   qmain = merge main --squash
+
   smain = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
   ps = !git push && git switch main && git rebase develop && git push && git switch develop
   psup = push --set-upstream origin
@@ -66,6 +76,9 @@
   clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
   release = !git flow release start $1 && git flow release finish $1
   psflow = !git switch main && git push && git push --tags && git switch develop && git merge main && git push 
+
+	switch2 = "!f() { git show-ref --heads --verify \"refs/heads/$1\" && git symbolic-ref -m \"switch to branch $1 not touching workdir\" HEAD \"refs/heads/$1\"; }; f"
+
 [push]
   autoSetupRemote = True
 [pull]
