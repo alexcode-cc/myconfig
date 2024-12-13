@@ -149,6 +149,9 @@ cnoreabbrev ds g/^$/d
 "cnoreabbrev nb let g:NERDTreeWinSize = 31
 "let g:NERDTreeWinSize = 15
 "let g:NERDTreeWinSize = 30
+" replace \n by newline
+" :set magic
+" :s/\\n/^M/g
 
 " Map keys
 " Force myself to not to use the error keys
