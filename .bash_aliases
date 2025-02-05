@@ -1,5 +1,6 @@
 # Usefully aliases
 echo bash_aliases loading...
+alias publicip="curl -s4 https://ifconfig.co || curl -s4 https://api64.ipify.org"
 alias bconfig="vim ~/.bashrc"
 alias breload="source ~/.bashrc"
 alias baconfig="vim ~/.bash_aliases"
