@@ -3,6 +3,7 @@ echo bash_aliases loading...
 # shell I am using
 #alias shell="ps -p '$$'"
 #alias shell="echo $SHELL"
+alias publicip="curl -s4 https://ifconfig.co || curl -s4 https://api64.ipify.org"
 alias shell="echo $0"
 alias bconfig="vim ~/.bashrc"
 alias breload="source ~/.bashrc"
