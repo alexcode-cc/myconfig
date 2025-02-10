@@ -23,4 +23,6 @@ alias rvminfo="rvm list && rvm gemset list"
 alias n16="nvm use 16.20.2"
 alias n18="nvm use 18.20.4"
 alias n20="nvm use 20.18.0"
+alias delgitlabkey="sudo apt-key del 3F01618A51312F3F"
+alias addgitlabkey="curl -s "https://packages.gitlab.com/gpg.key" | sudo apt-key add -"
 echo bash_aliases loaded.
