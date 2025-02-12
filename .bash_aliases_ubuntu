@@ -3,6 +3,7 @@ echo bash_aliases loading...
 # shell I am using
 #alias shell="ps -p '$$'"
 #alias shell="echo $SHELL"
+alias updategooglecert="​wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | tee /etc/apt/trusted.gpg.d/google.asc >/dev/null"
 alias randpass="LC_ALL=C tr -dc A-Za-z0-9 </dev/urandom | head -c 32
 alias publicip="curl -s4 https://ifconfig.co || curl -s4 https://api64.ipify.org"
 alias shell="echo $0"
