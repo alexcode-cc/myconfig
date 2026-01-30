@@ -12,42 +12,81 @@
 [init]
   defaultBranch = main
 [alias]
-	initmain = !git init && git switch --create main 
+  # init alises
+	initcommit = !git init && git add . && git commit
+  initmain = !git init && git switch --create main 
   initmodule = submodule update --init --recursive
-
 	devinit = !git branch main && git branch develop && git switch main && git flow init -f && git switch develop
+
+	change=diff --name-only HEAD~1
+
 
 	#pullallremote= !git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
 
-  pushtag = push origin tag
-  tags = tag -l -n
-  undel = reflog --no-abbrev
-  merge-force-write = merge -X theirs
-  pushall = push --set-upstream origin --all
-  pushtags = push --set-upstream origin --tags
-  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+  # log alises
+  l = !git log --oneline $@
+	ls = !git --no-pager log --oneline $@
   lg = !git log --oneline --graph
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
   lgp = !git --no-pager log -20 --oneline --graph
   lgu = !git --no-pager log -20 --oneline --graph --author="user@email.com"
-  ls = !git --no-pager log -20 --graph --pretty=format:'%h <%an> %ar %s'
+  ll = !git --no-pager log -20 --graph --pretty=format:'%h <%an> %ar %s'
   oneline = !git --no-pager log --decorate=short --pretty=oneline
-  bv = !git --no-pager branch -v
-  br = !git --no-pager branch
+  logname = log --name-only
+
+  # tag alises
+  pushtag = push origin tag
+  tags = tag -l -n
+  captag = tag -l -n1
   lst = !git --no-pager tag -n9
-  st = status --short
-  lsm = ls-files --modified
-  addm = !git ls-files --modified | xargs git add
-  aconf = config --list --global
-  co = checkout
-  unstage = restore --staged *
-  undochange = restore *
-  amend = !git add . && git commit --amend
+
+  # remote alises 
   origin = remote show origin
   psbr = push -u origin --all
   pstg = push -u origin --tags
   psall = !git push --all && git push --tags
   psmodule = pull --recurse-submodules
 
+  # branch alises
+  pushall = push --set-upstream origin --all
+  pushtags = push --set-upstream origin --tags
+  bv = !git --no-pager branch -v
+  br = !git --no-pager branch
+  smain = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
+  sdevelop = !git branch -m master develop && git symbolic-ref HEAD refs/heads/develop
+  ps = !git push && git switch main && git rebase develop && git push && git switch develop
+  psup = push --set-upstream origin
+  
+
+  # change alises
+  unstage = restore --staged *
+  undochange = restore *
+  amend = !git add . && git commit --amend
+  ps = !git push && git switch main && git rebase develop && git push && git switch develop
+  psup = push --set-upstream origin
+  captag = tag -l -n1
+  unstash = !git stash show -p | git apply -3 &\n& git stash drop
+  commit-auth = commit --amend --author="'user <user@email.com>'" --no-edit
+  clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
+	switch2 = "!f() { git show-ref --heads --verify \"refs/heads/$1\" && git symbolic-ref -m \"switch to branch $1 not touching workdir\" HEAD \"refs/heads/$1\"; }; f"
+
+  # git flow alises
+  flowall = !git branch main && git branch develop && git flow init -f && git switch develop
+  release = !git flow release start $1 && git flow release finish $1
+  psflow = !git switch main && git push && git push --tags && git switch develop && git merge main && git push 
+
+  # merge alises
+  mgmain = merge main
+  mgdevelop = merge develop  
+  qmain = merge main --squash
+
+  # advanced alises
+  undel = reflog --no-abbrev
+  merge-force-write = merge -X theirs
+  lsm = ls-files --modified
+  addm = !git ls-files --modified | xargs git add
+
+  # switch alises  
   sw = switch
   main = switch main
   wsl = switch wsl
@@ -63,21 +102,10 @@
   test = switch test
   merge-dev = switch merge-dev
 
-  mgmain = merge main
-  mgdevelop = merge develop  
-  qmain = merge main --squash
-
-  smain = !git branch -m master main && git symbolic-ref HEAD refs/heads/main
-  ps = !git push && git switch main && git rebase develop && git push && git switch develop
-  psup = push --set-upstream origin
-  captag = tag -l -n1
-  unstash = !git stash show -p | git apply -3 &\n& git stash drop
-  commit-auth = commit --amend --author="'user <user@email.com>'" --no-edit
-  clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
-  release = !git flow release start $1 && git flow release finish $1
-  psflow = !git switch main && git push && git push --tags && git switch develop && git merge main && git push 
-
-	switch2 = "!f() { git show-ref --heads --verify \"refs/heads/$1\" && git symbolic-ref -m \"switch to branch $1 not touching workdir\" HEAD \"refs/heads/$1\"; }; f"
+  # other alises
+  aconf = config --list --global
+  st = status --short
+  co = checkout
 
 [push]
   autoSetupRemote = True
@@ -88,4 +116,13 @@
 #  branch = false
 [http]
 #sslVerify = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[safe]
+#directory = * 
+#[credential "https://www.example.com"]
+#	provider = generic
 
