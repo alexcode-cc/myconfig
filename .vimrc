@@ -139,6 +139,7 @@ cnoreabbrev rv hi CursorLine cterm=reverse
 cnoreabbrev ru hi CursorLine cterm=underline
 "cnoreabbrev rb hi CursorLine cterm=bold
 cnoreabbrev ro hi CursorLine cterm=none
+# use ^M to represent newline in the command mode, press Ctrl-V then Enter to input ^M
 cnoreabbrev dm %s/^M/\r/g
 " cnoreabbrev cs colorscheme
 " delete all empty lines
