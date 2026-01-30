@@ -18,11 +18,11 @@ call vundle#begin()
 Plugin 'alexcode-cc/Vundle.vim' " required
 
 " My Bundles here:
-Plugin 'maksimr/vim-jsbeautify'
 Plugin 'scrooloose/nerdtree'
-Plugin 'rust-lang/rust.vim'
-Plugin 'morhetz/gruvbox'
 Plugin 'altercation/vim-colors-solarized'
+"Plugin 'maksimr/vim-jsbeautify'
+"Plugin 'rust-lang/rust.vim'
+"Plugin 'morhetz/gruvbox'
 "Plugin 'mattn/emmet-vim'
 "Plugin 'tpope/vim-rails'
 "Plugin 'pearofducks/ansible-vim'
@@ -76,9 +76,9 @@ let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set t_Co=256
 "set background=dark
 set background=light
-colorschem gruvbox 
+"colorschem gruvbox 
 "colorscheme solarized
-"colorscheme solarized8_flat
+colorscheme solarized8_flat
 "else
 "set background=dark
 " set background=light
@@ -86,19 +86,19 @@ colorschem gruvbox
 "
 
 "ruby env
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set noexpandtab
+"set tabstop=2
+"set softtabstop=2
+"set shiftwidth=2
+"set noexpandtab
 
 "python env
-"set textwidth=79  " lines longer than 79 columns will be broken
-"set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
-"set tabstop=4     " a hard TAB displays as 4 columns
-"set expandtab     " insert spaces when hitting TABs
-"set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
-"set shiftround    " round indent to multiple of 'shiftwidth'
-"set autoindent    " align the new line indent with the previous line
+set textwidth=79  " lines longer than 79 columns will be broken
+set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
+set tabstop=4     " a hard TAB displays as 4 columns
+set expandtab     " insert spaces when hitting TABs
+set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
+set shiftround    " round indent to multiple of 'shiftwidth'
+set autoindent    " align the new line indent with the previous line
 
 " for ansible syntastic
 "let g:syntastic_enable_highlighting = 1
@@ -196,11 +196,11 @@ nmap <leader>a ^d0i<tab>
 nmap <leader>A ^d0
 
 " vim-jsbeautify key mapping
-nmap <leader>h :call HtmlBeautify()<cr>
-nmap <leader>c :call CSSBeautify()<cr>
-nmap <leader>j :call JsBeautify()<cr>
-nmap <leader>n :call JsonBeautify()<cr>
-nmap <leader>x :call JsxBeautify()<cr>
+"nmap <leader>h :call HtmlBeautify()<cr>
+"nmap <leader>c :call CSSBeautify()<cr>
+"nmap <leader>j :call JsBeautify()<cr>
+"nmap <leader>n :call JsonBeautify()<cr>
+"nmap <leader>x :call JsxBeautify()<cr>
 
 " visual mode
 " sudo apt install vim-gtk
