@@ -1,5 +1,6 @@
 # Usefully aliases
 echo bash_aliases loading...
+alias services="systemctl list-unit-files --type=service --state=enabled"
 alias passtest="ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no  $*"
 alias venv="source .venv/bin/activate"
 alias publicip="curl -s4 https://ifconfig.co || curl -s4 https://api64.ipify.org"
