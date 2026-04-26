@@ -13,19 +13,19 @@
   defaultBranch = main
 [alias]
   # init alises
-	initcommit = !git init && git add . && git commit
+  initcommit = !git init && git add . && git commit
   initmain = !git init && git switch --create main 
   initmodule = submodule update --init --recursive
-	devinit = !git branch main && git branch develop && git switch main && git flow init -f && git switch develop
+  devinit = !git branch main && git branch develop && git switch main && git flow init -f && git switch develop
 
-	change=diff --name-only HEAD~1
+  change=diff --name-only HEAD~1
 
 
-	#pullallremote= !git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+  #pullallremote= !git branch -r | grep -v '\->' | sed "s,\x1B\[[0-9;]*[a-zA-Z],,g" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
 
   # log alises
   l = !git log --oneline $@
-	ls = !git --no-pager log --oneline $@
+  ls = !git --no-pager log --oneline $@
   lg = !git log --oneline --graph
   lol = log --pretty=oneline --abbrev-commit --graph --decorate
   lgp = !git --no-pager log -20 --oneline --graph
@@ -68,7 +68,7 @@
   unstash = !git stash show -p | git apply -3 &\n& git stash drop
   commit-auth = commit --amend --author="'user <user@email.com>'" --no-edit
   clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
-	switch2 = "!f() { git show-ref --heads --verify \"refs/heads/$1\" && git symbolic-ref -m \"switch to branch $1 not touching workdir\" HEAD \"refs/heads/$1\"; }; f"
+  switch2 = "!f() { git show-ref --heads --verify \"refs/heads/$1\" && git symbolic-ref -m \"switch to branch $1 not touching workdir\" HEAD \"refs/heads/$1\"; }; f"
 
   # git flow alises
   flowall = !git branch main && git branch develop && git flow init -f && git switch develop
@@ -109,18 +109,23 @@
 
 [push]
   autoSetupRemote = True
+
 [pull]
   rebase = true
+
 [pager]
 #  log = false
 #  branch = false
+
 [http]
 #sslVerify = false
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+
+#[filter "lfs"]
+#  clean = git-lfs clean -- %f
+#  smudge = git-lfs smudge -- %f
+#  process = git-lfs filter-process
+#  required = true
+
 [safe]
 #directory = * 
 #[credential "https://www.example.com"]
