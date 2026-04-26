@@ -18,7 +18,7 @@ alias rvminfo="rvm list && rvm gemset list"
 
 # System Aliases
 alias h="history"
-update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && autoclean -y"
+alias update="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y && sudo apt autoclean -y"
 alias upkey="sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $1"
 alias checklogin="cat /var/log/auth.log | grep 'Invalid user' | more"
 alias nginxstop="sudo systemctl stop nginx && sudo systemctl status nginx"
