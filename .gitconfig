@@ -56,7 +56,7 @@
   sdevelop = !git branch -m master develop && git symbolic-ref HEAD refs/heads/develop
   ps = !git push && git switch main && git rebase develop && git push && git switch develop
   psup = push --set-upstream origin
-  
+  clone-branches = ! git branch -a | sed -n "/\/HEAD /d; /\/master$/d; /remotes/p;" | xargs -L1 git checkout -t
 
   # change alises
   unstage = restore --staged *
